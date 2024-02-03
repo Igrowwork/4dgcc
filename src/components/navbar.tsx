@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { MotionNav } from './motion-div'
@@ -7,12 +6,12 @@ import NavbarClient from './navbar-client'
 import NavbarClientMobile from './navbar-client-mobile'
 import LangSwitcher from './lang-switcher'
 
-interface NavbarProps{
-    language : string
+interface NavbarProps {
+    language: string
 }
 
 
-export default function Navbar({language}:NavbarProps) {
+export default function Navbar({ language }: NavbarProps) {
 
     const variants = {
         start: { y: 100, opacity: 0 },
@@ -27,7 +26,7 @@ export default function Navbar({language}:NavbarProps) {
                         <img src={"/assets/images/cropped-logo.png"} alt='logo' className='absolute top-0 left-0 h-full w-full object-contain object-left scale-110' />
                     </Link>
                     <div className='h-full w-full relative col-span-2'>
-                        <Image src={"/assets/images/certificates.jpg"} alt='' fill />
+                        <img src={"/assets/images/certificates.jpg"} alt='' className='absolute h-full w-full' />
                     </div>
                 </div>
                 <div className='sm:col-span-2 hidden sm:flex'></div>
@@ -35,7 +34,9 @@ export default function Navbar({language}:NavbarProps) {
                     <NavbarClient language={language} />
                 </div>
                 <div className='sm:col-span-2 xl:col-span-1 flex justify-end items-center'>
-                    <LangSwitcher />
+                    <div className='absolute bottom-1 right-2 xl:relative xl:top-0 xl:right-0'>
+                        <LangSwitcher />
+                    </div>
                     <NavbarClientMobile />
                 </div>
             </MotionNav>

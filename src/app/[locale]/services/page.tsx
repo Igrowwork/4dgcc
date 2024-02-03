@@ -1,7 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 import { unstable_setRequestLocale } from 'next-intl/server'
 import { useTranslations } from 'next-intl'
 import { cn } from '@/lib/utils'
-import Image from 'next/image'
 import React from 'react'
 import { rubik } from '@/app/fonts'
 import HeroSection from '@/components/hero-section'
@@ -96,7 +96,7 @@ export default function Page({ params: { locale } }: { params: { locale: any } }
                     {servicesData.map((data, index) => (
                         <MotionDiv variants={aboutVariants} initial="hiddenBottom" whileInView={"visibleBottom"} viewport={{ once: true }} transition={{ delay: data.delay, duration: 0.4, }} className='grid sm:grid-cols-10' key={index}>
                             <div className='relative h-[225px] sm:h-full w-full sm:col-span-4'>
-                                <Image src={`/assets/images/${data.imgName}`} alt='image' fill className='object-cover' />
+                                <img src={`/assets/images/${data.imgName}`} alt='image' className='absolute h-full w-full object-cover' />
                             </div>
                             <div className='sm:col-span-6 flex flex-col gap-6 sm:pl-6 py-4 sm:py-2'>
                                 <h3 className={cn("text-2xl text-secondary-main font-medium", rubik.className)}>{data.heading}</h3>
@@ -109,7 +109,7 @@ export default function Page({ params: { locale } }: { params: { locale: any } }
             </section>
 
             <section className='px-5 h-full w-full relative py-8 mb-20'>
-                <Image src={"/assets/images/projects-bg-img.png"} alt='' fill className=' object-cover' />
+                <img src={"/assets/images/projects-bg-img.png"} alt='' className='absolute top-0 left-0 h-full w-full object-cover' />
                 <div className='h-full w-full absolute top-0 left-0 bg-black/75' />
                 <div className='grid sm:grid-cols-3 gap-8 sm:gap-0 xl:gap-14 h-full w-full max-w-7xl mx-auto text-white relative py-6'>
                     <div className='flex flex-col items-center'>

@@ -52,7 +52,7 @@ export default function NavbarClientMobile() {
                 <SheetTrigger>
                     <AlignJustify />
                 </SheetTrigger>
-                <SheetContent side={"left"}>
+                <SheetContent side={"left"} className='bg-white'>
                     <div>
                         <ul className='flex flex-col gap-6 pl-8 pt-10'>
                             {routes.map((route) => (

@@ -2,7 +2,6 @@ import { cn } from '@/lib/utils'
 import Link from 'next/link'
 import React from 'react'
 import { Icons } from './icons/icons'
-import Image from 'next/image'
 import { rubik } from '@/app/fonts'
 import { PhoneCall } from 'lucide-react'
 import { unstable_setRequestLocale } from 'next-intl/server'
@@ -60,7 +59,8 @@ export default async function Footer({ language }: { language: string }) {
                     </div>
                     <div className='flex sm:grid sm:grid-cols-10 h-fit py-4 border-b-2 -mt-8 pl-1 sm:mt-0 sm:pl-0'>
                         <Link href={"/"} className='hidden sm:block relative sm:col-span-1 xl:col-span-2 h-full w-full'>
-                            <Image src={"/assets/images/white-logo.png"} alt='logo' fill className='object-contain scale-125' />
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img src={"/assets/images/white-logo.png"} alt='logo' className='absolute h-full w-full object-contain scale-125' />
                         </Link>
                         <div className='sm:col-span-7 lg:col-span-4 xl:col-span-5 hidden sm:flex justify-center items-center h-full w-full py-4'>
                             <ul className='flex sm:justify-evenly xl:justify-around w-full'>
@@ -73,14 +73,7 @@ export default async function Footer({ language }: { language: string }) {
                                 ))}
                             </ul>
                         </div>
-                        <div className='sm:col-span-2 xl:col-span-3'>
-                            {/* <div className='flex gap-4 sm:gap-3 lg:gap-6 w-fit mx-auto'>
-                                <Icons.fb className='h-5 w-5 sm:h-4 sm:w-4 lg:h-6 lg:w-6' />
-                                <Icons.twitter className='h-5 w-5 sm:h-4 sm:w-4 lg:h-6 lg:w-6' />
-                                <Icons.insta className='h-5 w-5 sm:h-4 sm:w-4 lg:h-6 lg:w-6' />
-                                <Icons.linkedIn className='h-5 w-5 sm:h-4 sm:w-4 lg:h-6 lg:w-6' />
-                            </div> */}
-                        </div>
+                        <div className='sm:col-span-2 xl:col-span-3'></div>
                     </div>
                     <div className='flex flex-col sm:flex-row justify-between gap-4 sm:gap-0 w-full text-gray-400 text-xs lg:text-sm'>
                         <div className=''>

@@ -1,7 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 import { unstable_setRequestLocale } from 'next-intl/server'
 import { useTranslations } from 'next-intl'
 import { cn } from '@/lib/utils'
-import Image from 'next/image'
 import React from 'react'
 import { rubik } from '@/app/fonts'
 import CustomLabel from '@/components/custom-label'
@@ -74,10 +74,10 @@ export default function Page({ params: { locale } }: { params: { locale: any } }
                         <MotionP variants={aboutVariants} initial="hiddenBottom" whileInView={"visibleBottom"} viewport={{ once: true }}>{t('abouttext2')}</MotionP>
                     </div>
                     <MotionDiv variants={aboutVariants} initial="hiddenRight" whileInView={"visibleRight"} viewport={{ once: true }} transition={{ duration: 0.4, delay: 1 }} className='sm:col-span-6 sm:pr-32 lg:pr-0 h-full w-full flex justify-center items-center'>
-                        <div className='relative h-[460px] w-full my-auto'>
-                            <Image src='/assets/images/home-about-bg.png' alt='bg-svg' fill className='object-contain object-right xl:scale-[1.02]' />
+                        <div className='relative md:h-[460px] w-full my-auto'>
+                            <img src='/assets/images/home-about-bg.png' alt='bg-svg' className='absolute w-full h-full object-contain object-right xl:scale-[1.02]' />
                             <div className='relative h-60 md:h-[350px] md:scale-[.65] lg:scale-100 lg:w-5/6 xl:w-11/12 lg:mt-16 xl:mt-0 xl:top-9'>
-                                <Image src='/assets/images/home-about-img.jpg' alt='bg-svg' fill className='object-cover object-left' />
+                                <img src='/assets/images/home-about-img.jpg' alt='bg-svg' className='absolute h-full w-full object-cover object-left' />
                             </div>
                         </div>
                     </MotionDiv>
