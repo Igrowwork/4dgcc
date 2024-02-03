@@ -1,3 +1,5 @@
+import { unstable_setRequestLocale } from 'next-intl/server'
+import { useTranslations } from 'next-intl'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import React from 'react'
@@ -6,37 +8,11 @@ import CustomLabel from '@/components/custom-label'
 import { Icons } from '@/components/icons/icons'
 import HeroSection from '@/components/hero-section'
 import { MotionDiv, MotionH2, MotionP } from '@/components/motion-div'
-import { useTranslations } from 'next-intl'
-import { unstable_setRequestLocale } from 'next-intl/server'
-
-const aboutVariants = {
-    hiddenBottom: {
-        y: 100,
-        opacity: 0,
-    },
-    visibleBottom: {
-        y: 0,
-        opacity: 1,
-        staggerChildren: 0.3,
-        transition: {
-            delay: 0.3,
-            duration: 0.4,
-        }
-    },
-    hiddenRight: {
-        x: 200,
-        opacity: 0,
-    },
-    visibleRight: {
-        x: 0,
-        opacity: 1,
-    },
-}
 
 export default function Page({ params: { locale } }: { params: { locale: any } }) {
 
-    const t = useTranslations('aboutPage');
     unstable_setRequestLocale(locale);
+    const t = useTranslations('aboutPage');
 
     const sectionThree = [
         {
@@ -52,6 +28,31 @@ export default function Page({ params: { locale } }: { params: { locale: any } }
             text: `${t('certifiedtext')}`,
         },
     ]
+
+    const aboutVariants = {
+        hiddenBottom: {
+            y: 100,
+            opacity: 0,
+        },
+        visibleBottom: {
+            y: 0,
+            opacity: 1,
+            staggerChildren: 0.3,
+            transition: {
+                delay: 0.3,
+                duration: 0.4,
+            }
+        },
+        hiddenRight: {
+            x: 200,
+            opacity: 0,
+        },
+        visibleRight: {
+            x: 0,
+            opacity: 1,
+        },
+    }
+    
     return (
         <main className='flex flex-col gap-10'>
             {/*  Hero Section  */}

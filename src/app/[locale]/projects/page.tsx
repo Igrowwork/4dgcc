@@ -1,3 +1,5 @@
+import { unstable_setRequestLocale } from 'next-intl/server'
+import { useTranslations } from 'next-intl'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import React from 'react'
@@ -10,14 +12,12 @@ import {
     DialogTrigger,
 } from "@/components/ui/dialog"
 import { MotionDiv } from '@/components/motion-div'
-import { useTranslations } from 'next-intl'
-import { unstable_setRequestLocale } from 'next-intl/server'
 
 
 export default function Page({ params: { locale } }: { params: { locale: any } }) {
 
-    const t = useTranslations('projectPage');
     unstable_setRequestLocale(locale);
+    const t = useTranslations('projectPage');
 
     const projects = [
         {

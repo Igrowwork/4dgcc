@@ -1,17 +1,17 @@
+import { unstable_setRequestLocale } from 'next-intl/server'
+import { useTranslations } from 'next-intl'
 import { cn } from '@/lib/utils'
 import React from 'react'
 import { rubik } from '@/app/fonts'
 import { Mail, MapPin, PhoneCall } from 'lucide-react'
 import HeroSection from '@/components/hero-section'
 import { Icons } from '@/components/icons/icons'
-import { useTranslations } from 'next-intl'
-import { unstable_setRequestLocale } from 'next-intl/server'
 
 
 export default function Page({ params: { locale } }: { params: { locale: any } }) {
 
-    const t = useTranslations('contactPage');
     unstable_setRequestLocale(locale);
+    const t = useTranslations('contactPage');
 
     return (
         <main className='flex flex-col gap-10 sm:gap-20'>

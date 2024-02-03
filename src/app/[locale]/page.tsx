@@ -1,5 +1,5 @@
-import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
+import { useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import { rubik } from '@/app/fonts'
@@ -10,8 +10,8 @@ import { MotionDiv, MotionH1, MotionH2, MotionP, MotionSection } from '@/compone
 
 export default function Home({ params: { locale } }: { params: { locale: any } }) {
 
-  const t = useTranslations('home');
   unstable_setRequestLocale(locale);
+  const t = useTranslations('home');
 
   const variants = {
     start: { x: 200, opacity: 0 },

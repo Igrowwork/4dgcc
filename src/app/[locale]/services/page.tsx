@@ -1,17 +1,17 @@
+import { unstable_setRequestLocale } from 'next-intl/server'
+import { useTranslations } from 'next-intl'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import React from 'react'
 import { rubik } from '@/app/fonts'
 import HeroSection from '@/components/hero-section'
 import { MotionDiv} from '@/components/motion-div'
-import { useTranslations } from 'next-intl'
-import { unstable_setRequestLocale } from 'next-intl/server'
 
 
 export default function Page({ params: { locale } }: { params: { locale: any } }) {
 
-    const t = useTranslations('servicePage');
     unstable_setRequestLocale(locale);
+    const t = useTranslations('servicePage');
 
     const servicesData = [
         {

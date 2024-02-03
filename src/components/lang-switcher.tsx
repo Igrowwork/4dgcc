@@ -2,9 +2,11 @@
 
 import { useRouter } from 'next/navigation'
 import React, { useState, useTransition } from 'react'
+import { useLocale } from 'next-intl'
 
 export default function LangSwitcher() {
-    const [lang, setlang] = useState("en")
+    const locale = useLocale()
+    const [lang, setlang] = useState(locale)
     const [isPending, startTransition] = useTransition()
     const router = useRouter()
 
