@@ -6,6 +6,13 @@ import React from 'react'
 import { rubik } from '@/app/fonts'
 import HeroSection from '@/components/hero-section'
 import { MotionDiv} from '@/components/motion-div'
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Services : Fourth Dimension General Contracting LLC Abu Dhabi, UAE",
+  keywords: ['electrical construction', 'mechanical construction', 'oil and gas field facilities & services', 'water desalination and treatment', 'sewerage treatment station', 'cuilding projects contracting', 'steel structure contracting'],
+  description: "Build the future with us where construction meets excellence. Your project, our passion.",
+};
 
 
 export default function Page({ params: { locale } }: { params: { locale: any } }) {

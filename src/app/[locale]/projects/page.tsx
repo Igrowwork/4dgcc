@@ -12,6 +12,12 @@ import {
     DialogTrigger,
 } from "@/components/ui/dialog"
 import { MotionDiv } from '@/components/motion-div'
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects : Fourth Dimension General Contracting LLC Abu Dhabi, UAE",
+  description: "Trust our skills for timeless construction. Your project, our priority.",
+};
 
 
 export default function Page({ params: { locale } }: { params: { locale: any } }) {

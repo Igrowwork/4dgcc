@@ -7,6 +7,13 @@ import { Icons } from '@/components/icons/icons'
 import CustomLabel from '@/components/custom-label'
 import Link from 'next/link'
 import { MotionDiv, MotionH1, MotionH2, MotionP, MotionSection } from '@/components/motion-div'
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Fourth Dimension General Contracting LLC: Expert construction services for your projects in Abu Dhabi, UAE",
+  keywords: [ 'construction services in riyadh', 'construction services', 'Fourth dimension construction', 'construction projects', 'building construction services','electrical construction', 'mechanical construction', 'oil and gas field facilities & services', 'water desalination and treatment', 'sewerage treatment station', 'cuilding projects contracting', 'steel structure contracting'],
+  description: "Choose us for lasting construction excellence. Trust our expertise to bring your vision to life.",
+};
 
 export default function Home({ params: { locale } }: { params: { locale: any } }) {
 

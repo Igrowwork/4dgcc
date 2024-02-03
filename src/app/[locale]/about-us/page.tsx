@@ -8,6 +8,12 @@ import CustomLabel from '@/components/custom-label'
 import { Icons } from '@/components/icons/icons'
 import HeroSection from '@/components/hero-section'
 import { MotionDiv, MotionH2, MotionP } from '@/components/motion-div'
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About : Fourth Dimension General Contracting LLC Abu Dhabi, UAE",
+  description: "Build the future with us where construction meets excellence. Your project, our passion.",
+};
 
 export default function Page({ params: { locale } }: { params: { locale: any } }) {
 
@@ -52,7 +58,7 @@ export default function Page({ params: { locale } }: { params: { locale: any } }
             opacity: 1,
         },
     }
-    
+
     return (
         <main className='flex flex-col gap-10'>
             {/*  Hero Section  */}

@@ -6,6 +6,12 @@ import { rubik } from '@/app/fonts'
 import { Mail, MapPin, PhoneCall } from 'lucide-react'
 import HeroSection from '@/components/hero-section'
 import { Icons } from '@/components/icons/icons'
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact : Fourth Dimension General Contracting LLC Abu Dhabi, UAE",
+  description: "Connect with Fourth Dimension Constructions - Your Gateway to Innovative Building Solutions!",
+};
 
 
 export default function Page({ params: { locale } }: { params: { locale: any } }) {
