@@ -7,7 +7,7 @@
     "contact": "Contact"
   },
   "home": {
-    "heading" : "Constructing Tomorrow, Today",
+    "heading" : "Constructing Tomorrow & Today",
     "subHeading": "Transforming Visions into Concrete Reality.",
     "completedProjects": "Completed Projects",
     "experience": "Years of Experience",
@@ -21,7 +21,13 @@
     "herocardsubheadingtext3": "We guarantee the sustained functionality of the places and infrastructures under our care.",
     "aboutlabel": "More About Us",
     "aboutheading": "We Construct and Manage Places and Infrastructures",
-    "abouttext1": "Fourth Dimension General Contracting L.L.C was established in 2007 under the Chairmanship of Mr. Ghanem Ali Bin Hamoodah with Mr. Hamad Ghanem as Deputy Chairman and Mr. Farid Mansour as the Managing Partner, and has gradually developed into a highly respected major construction company establishing a reputation of commitment, quality and reliability in Abu Dhabi.",
+    "abouttext1part1": "Fourth Dimension General Contracting L.L.C was established in 2007 under the Chairmanship of ",
+    "abouttextname1": "Mr. Ghanem Ali Bin Hamoodah ",
+    "abouttext1part2": "with ",
+    "abouttextname2": "Mr. Hamad Ghanem ",
+    "abouttext1part3": "as Deputy Chairman and ",
+    "abouttextname3": "Mr. Farid Mansour ",
+    "abouttext1part4": "as the Managing Partner, and has gradually developed into a highly respected major construction company establishing a reputation of commitment, quality and reliability in Abu Dhabi.",
     "abouttext2": "We are an ISO 9001:2008, OHSAS 18001 & ISO 14001 certified company; operating in full compliance with ISO Quality Assurance & HSE systems and Procedures. We are committed to long term customer partnership, a central feature of which is provision of qualitative, cost efficient service based on an understanding of Clients needs and our own ability to deliver quality on time.",
     "servicelabel": "Our Services",
     "serviceheading": "Our Expertise and Specialities",
@@ -39,7 +45,7 @@
   },
   "footer": {
     "title": "Where Quality Meets Structure",
-    "address": "Fourth Dimension General Contracting L.L.C Hamoodah Bin Ali Building, Khalifa St. Abu Dhabi.",
+    "address": "Fourth Dimension General Contracting L.L.C, P.o. Box: 113983, Hamoodah Bin Ali Building, Khalifa St. Abu Dhabi, UAE.",
     "copyright": "© 2024. All Rights Reserved Fourth Dimension General Contracting L.L.C",
     "t&c":"Terms & Conditions",
     "privacy": "Privacy & Policy",
@@ -54,7 +60,13 @@
     "subheading": "Fourth Dimension General Contracting L.L.C is a leading construction company committed to excellence. With a focus on quality, innovation, and client satisfaction, we deliver top-notch services in electrical and mechanical construction, oil and gas facilities, water treatment, sewerage stations, building projects, and steel structures. Our certified team ensures precision and safety in every project, transforming visions into reality.",
     "aboutlabel": "More About Us",
     "aboutheading": "We Construct and Manage Places and Infrastructures",
-    "abouttext1": "Fourth Dimension General Contracting L.L.C was established in 2007 under the Chairmanship of Mr. Ghanem Ali Bin Hamoodah with Mr. Hamad Ghanem as Deputy Chairman and Mr. Farid Mansour as the Managing Partner, and has gradually developed into a highly respected major construction company establishing a reputation of commitment, quality and reliability in Abu Dhabi.",
+    "abouttext1part1": "Fourth Dimension General Contracting L.L.C was established in 2007 under the Chairmanship of ",
+    "abouttextname1": "Mr. Ghanem Ali Bin Hamoodah ",
+    "abouttext1part2": "with ",
+    "abouttextname2": "Mr. Hamad Ghanem ",
+    "abouttext1part3": "as Deputy Chairman and ",
+    "abouttextname3": "Mr. Farid Mansour ",
+    "abouttext1part4": "as the Managing Partner, and has gradually developed into a highly respected major construction company establishing a reputation of commitment, quality and reliability in Abu Dhabi.",
     "abouttext2": "We are an ISO 9001:2008, OHSAS 18001 & ISO 14001 certified company; operating in full compliance with ISO Quality Assurance & HSE systems and Procedures. We are committed to long term customer partnership, a central feature of which is provision of qualitative, cost efficient service based on an understanding of Clients needs and our own ability to deliver quality on time.",
     "missionheading": "Our Mission",
     "missiontext": "At Fourth Dimension General Contracting L.L.C, our mission is to pioneer excellence in construction by delivering innovative, sustainable, and client-focused solutions. We are dedicated to transforming visions into reality, ensuring the highest standards of quality, safety, and environmental responsibility. Through collaboration and cutting-edge practices, we aim to build lasting structures that contribute positively to communities and industries.",
@@ -91,10 +103,10 @@
   "contactPage": {
     "heading": "Contact Us",
     "subheading": "Connect with Fourth Dimension Constructions. Your Gateway to Innovative Building Solutions!",
-    "contact": "Contact Details",
+    "contact": "Telephone",
     "fax": "Fax",
     "email": "Email",
     "location": "Our location",
-    "address": "Fourth Dimension General Contracting L.L.C Hamoodah Bin Ali Building, Khalifa St. Abu Dhabi."
+    "address": "Fourth Dimension General Contracting L.L.C, P.O. Box: 113983 Hamoodah Bin Ali Building, Khalifa St. Abu Dhabi, United Arab Emirates."
   }
 }

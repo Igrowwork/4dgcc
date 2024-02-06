@@ -70,7 +70,7 @@ export default function Page({ params: { locale } }: { params: { locale: any } }
                     <div className='flex flex-col gap-6 sm:col-span-5 text-text-color leading-relaxed text-sm lg:text-base'>
                         <CustomLabel label={`${t('aboutlabel')}`} />
                         <MotionH2 variants={aboutVariants} initial="hiddenBottom" whileInView={"visibleBottom"} viewport={{ once: true }} className={cn('text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-secondary-main leading-tight', rubik.className)}>{t('aboutheading')}</MotionH2>
-                        <MotionP variants={aboutVariants} initial="hiddenBottom" whileInView={"visibleBottom"} viewport={{ once: true }}>{t('abouttext1')}</MotionP>
+                        <MotionP variants={aboutVariants} initial="hiddenBottom" whileInView={"visibleBottom"} viewport={{ once: true }}>{t('abouttext1part1')} <span className='font-bold'>{t('abouttextname1')}</span> {t('abouttext1part2')} <span className='font-bold'>{t('abouttextname2')}</span> {t('abouttext1part3')} <span className='font-bold'>{t('abouttextname3')}</span> {t('abouttext1part4')}</MotionP>
                         <MotionP variants={aboutVariants} initial="hiddenBottom" whileInView={"visibleBottom"} viewport={{ once: true }}>{t('abouttext2')}</MotionP>
                     </div>
                     <MotionDiv variants={aboutVariants} initial="hiddenRight" whileInView={"visibleRight"} viewport={{ once: true }} transition={{ duration: 0.4, delay: 1 }} className='sm:col-span-6 sm:pr-32 lg:pr-0 h-full w-full flex justify-center items-center'>

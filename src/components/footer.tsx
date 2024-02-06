@@ -47,20 +47,20 @@ export default async function Footer({ language }: { language: string }) {
                                 <Icons.map2 className='shrink-0 bg-white p-1.5 rounded-full h-8 w-8' />
                                 <span>{t('address')}</span>
                             </Link>
-                            <Link href={"mailto:Info@4dgcc.com"} className='flex items-center gap-4'>
+                            <Link href={"mailto:HR@4dgcc.com"} className='flex items-center gap-4'>
                                 <Icons.mail2 className='shrink-0 bg-white p-1.5 rounded-full h-8 w-8' />
-                                <span>Info@4dgcc.com</span>
+                                <span>HR@4dgcc.com</span>
                             </Link>
                             <Link href={"tel:+97126679435"} className='flex items-center gap-4'>
                                 <span className='shrink-0 bg-white p-2 rounded-full h-8 w-8 text-secondary-main'><PhoneCall className='h-full w-full' /></span>
-                                <span>+97126679435</span>
+                                <span>+971 2 6679435</span>
                             </Link>
                         </div>
                     </div>
                     <div className='flex sm:grid sm:grid-cols-10 h-fit py-4 border-b-2 -mt-8 pl-1 sm:mt-0 sm:pl-0'>
                         <Link href={"/"} className='hidden sm:block relative sm:col-span-1 xl:col-span-2 h-full w-full'>
                             {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src={"/assets/images/white-logo.png"} alt='logo' className='absolute h-full w-full object-contain scale-125' />
+                            <img src={"/assets/images/logo.png"} alt='logo' className='absolute h-full w-full object-contain scale-125' />
                         </Link>
                         <div className='sm:col-span-7 lg:col-span-4 xl:col-span-5 hidden sm:flex justify-center items-center h-full w-full py-4'>
                             <ul className='flex sm:justify-evenly xl:justify-around w-full'>

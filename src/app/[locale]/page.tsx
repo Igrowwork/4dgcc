@@ -57,7 +57,7 @@ export default function Home({ params: { locale } }: { params: { locale: any } }
     <main className="flex flex-col gap-20">
 
       {/*  Hero Section  */}
-      <MotionSection variants={variants} initial={variants.startUp} animate={variants.endUp} transition={{ duration: 0.5, delay: 0.3 }} className='h-[550px] xl:h-screen w-full relative sm:mb-20'>
+      <MotionSection variants={variants} initial={variants.startUp} animate={variants.endUp} transition={{ duration: 0.5, delay: 0.3 }} className='h-[550px] xl:h-screen w-full relative mb-20'>
         <img src={"/assets/images/hero-img.jpg"} alt='hero image' className='object-cover absolute h-full w-full' />
         <div className='absolute h-fit w-fit flex flex-col gap-4 top-1/3 left-10 lg:left-20 xl:left-36'>
           <MotionH1 variants={variants} initial={variants.startUp} animate={variants.endUp} transition={{ duration: 0.4, delay: 0.9 }} className={cn('text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white font-bold', rubik.className)}>{t('heading')}</MotionH1>
@@ -66,11 +66,11 @@ export default function Home({ params: { locale } }: { params: { locale: any } }
         <div className={cn("absolute text-white h-fit w-fit top-[70%] md:top-[90%] lg:top-[85%] md:left-20 lg:left-40 xl:left-60 flex flex-col md:flex-row items-center md:items-start", rubik.className)}>
           <div className='flex'>
             <MotionDiv variants={variants} initial={variants.start} animate={variants.end} transition={{ duration: 0.4, delay: 1.4 }} className='p-4 lg:p-8 flex items-center flex-col gap-2 bg-secondary-main h-fit w-fit text-xs sm:text-sm lg:text-base'>
-              <span className='sm:text-4xl lg:text-6xl xl:text-7xl font-semibold'>800+</span>
+              <span className='text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-semibold'>800+</span>
               <span>{t('completedProjects')}</span>
             </MotionDiv>
             <MotionDiv variants={variants} initial={variants.start} animate={variants.end} transition={{ duration: 0.4, delay: 1.6 }} className='p-4 lg:p-8 flex items-center flex-col gap-2 bg-primary-main h-fit w-fit text-xs sm:text-sm lg:text-base'>
-              <span className='sm:text-4xl lg:text-6xl xl:text-7xl font-semibold'>17+</span>
+              <span className='text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-semibold'>17+</span>
               <span>{t('experience')}</span>
             </MotionDiv>
           </div>
@@ -107,7 +107,7 @@ export default function Home({ params: { locale } }: { params: { locale: any } }
           <div className='flex flex-col gap-6 sm:col-span-5 text-text-color leading-relaxed text-sm lg:text-base'>
             <CustomLabel label={`${t('aboutlabel')}`} />
             <MotionH2 variants={aboutVariants} initial="hiddenBottom" whileInView={"visibleBottom"} viewport={{ once: true }} className={cn('text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-secondary-main leading-tight', rubik.className)}>{t('aboutheading')}</MotionH2>
-            <MotionP variants={aboutVariants} initial="hiddenBottom" whileInView={"visibleBottom"} viewport={{ once: true }}>{t('abouttext1')}</MotionP>
+            <MotionP variants={aboutVariants} initial="hiddenBottom" whileInView={"visibleBottom"} viewport={{ once: true }}>{t('abouttext1part1')} <span className='font-bold'>{t('abouttextname1')}</span> {t('abouttext1part2')} <span className='font-bold'>{t('abouttextname2')}</span> {t('abouttext1part3')} <span className='font-bold'>{t('abouttextname3')}</span> {t('abouttext1part4')}</MotionP>
             <MotionP variants={aboutVariants} initial="hiddenBottom" whileInView={"visibleBottom"} viewport={{ once: true }}>{t('abouttext2')}</MotionP>
           </div>
           <MotionDiv variants={aboutVariants} initial="hiddenRight" whileInView={"visibleRight"} viewport={{ once: true }} transition={{ duration: 0.4, delay: 1 }} className='sm:col-span-6 sm:pr-32 lg:pr-0 h-full w-full flex justify-center items-center'>
@@ -143,7 +143,7 @@ export default function Home({ params: { locale } }: { params: { locale: any } }
               </div>
             </MotionDiv>
             <MotionDiv variants={aboutVariants} initial="hiddenRight" whileInView={"visibleRight"} viewport={{ once: true }} transition={{ duration: 0.4, delay: 1 }} className='relative h-[450px] w-full'>
-              <img src={"/assets/images/home-service-3.png"} alt='image' className='absolute object-cover' />
+              <img src={"/assets/images/home-service-3.png"} alt='image' className='absolute object-cover h-full w-full' />
               <div className='absolute bottom-0 bg-secondary-main max-h-max w-full py-3'>
                 <p className='text-center text-2xl text-white'>{t('service3')}</p>
               </div>

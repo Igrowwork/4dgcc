@@ -96,7 +96,7 @@ export default function Page({ params: { locale } }: { params: { locale: any } }
                     {projects.map((project, index) => (
                         <Dialog key={index}>
                             <DialogTrigger>
-                                <MotionDiv variants={aboutVariants} initial="hiddenBottom" whileInView={"visibleBottom"} viewport={{ once: true }} transition={{ duration: 0.3, delay: project.delay }} className='relative rounded-lg  border-secondary-main h-[200px] sm:h-[250px] lg:h-[350px] w-full overflow-hidden flex justify-start items-end p-10'>
+                                <MotionDiv variants={aboutVariants} initial="hiddenBottom" whileInView={"visibleBottom"} viewport={{ once: true }} transition={{ duration: 0.3, delay: project.delay }} className='relative rounded-lg  border-secondary-main h-[200px] sm:h-[250px] lg:h-[350px] w-full overflow-hidden flex justify-start items-end p-4'>
                                     <img src={`/assets/projects/${project.imageName}`} alt='project img' className='absolute top-0 left-0 h-full w-full object-cover' />
                                     <div className='h-full w-full bg-black/60 absolute top-0 left-0' />
                                     <h2 className={cn("text-xl sm:text-2xl lg:text-3xl leading-tight font-medium relative text-white overflow-hidden text-nowrap overflow-ellipsis", rubik.className)}>{project.text}</h2>
@@ -107,9 +107,8 @@ export default function Page({ params: { locale } }: { params: { locale: any } }
                                 <div className='flex flex-col gap-6'>
                                     <h2 className={cn('text-secondary-main sm:text-2xl lg:text-3xl font-medium text-center', rubik.className)}>{project.text}</h2>
                                     <div className='relative h-[200px] sm:h-[320px]'>
-                                        <img src={`/assets/projects/${project.imageName}`} alt={project.imageName} className='absolute object-contain' />
+                                        <img src={`/assets/projects/${project.imageName}`} alt={project.imageName} className='absolute object-contain h-full w-full' />
                                     </div>
-                                    <p className='text-text-color leading-relaxed text-center -mt-4'>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in .</p>
                                 </div>
                             </DialogContent>
 

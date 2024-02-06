@@ -12,37 +12,40 @@ import { AlignJustify } from 'lucide-react'
 import Link from 'next/link'
 import { rubik } from '@/app/fonts'
 import { cn } from '@/lib/utils'
+import { useTranslations } from 'next-intl'
 
 
-export default function NavbarClientMobile() {
+export default function NavbarClientMobile({ language }: { language: string }) {
+
+    const t = useTranslations('nav');
 
     const path = usePathname()
 
     const routes = [
         {
-            label: 'Home',
-            href: '/',
-            active: path === '/en' || path === '/ar'
+            label: `${t('home')}`,
+            href: `/${language}`,
+            active: path === `/${language}` || path === '/',
         },
         {
-            label: 'About Us',
-            href: '/about-us',
-            active: path === '/about-us'
+            label: `${t('about')}`,
+            href: `/${language}/about-us`,
+            active: path === `/${language}/about-us`,
         },
         {
-            label: 'Services',
-            href: '/services',
-            active: path === '/services'
+            label: `${t('services')}`,
+            href: `/${language}/services`,
+            active: path === `/${language}/services`,
         },
         {
-            label: 'Projects',
-            href: '/projects',
-            active: path === '/projects'
+            label: `${t('projects')}`,
+            href: `/${language}/projects`,
+            active: path === `/${language}/projects`,
         },
         {
-            label: 'Contact',
-            href: '/contact',
-            active: path === '/contact'
+            label: `${t('contact')}`,
+            href: `/${language}/contact`,
+            active: path === `/${language}/contact`,
         },
     ]
 

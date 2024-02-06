@@ -20,10 +20,10 @@ export default function Navbar({ language }: NavbarProps) {
 
     return (
         <header className='px-6 py-2 sm:py-4 lg:py-2 bg-white h-20 w-full absolute top-0 left-0 z-50'>
-            <MotionNav variants={variants} initial={variants.start} animate={variants.end} transition={{ duration: 0.4 }} className='max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-10 h-full'>
-                <div className='sm:col-span-2 xl:col-span-3 grid grid-cols-3'>
+            <MotionNav variants={variants} initial={variants.start} animate={variants.end} transition={{ duration: 0.4 }} className='max-w-7xl mx-auto grid grid-cols-3 sm:grid-cols-10 h-full'>
+                <div className='col-span-2 xl:col-span-3 grid grid-cols-3'>
                     <Link href={`/`} className='relative h-full w-full'>
-                        <img src={"/assets/images/cropped-logo.png"} alt='logo' className='absolute top-0 left-0 h-full w-full object-contain object-left scale-110' />
+                        <img src={"/assets/images/logo.png"} alt='logo' className='absolute top-0 left-0 h-full w-full object-contain object-left md:scale-110' />
                     </Link>
                     <div className='h-full w-full relative col-span-2'>
                         <img src={"/assets/images/certificates.jpg"} alt='' className='absolute h-full w-full' />
@@ -37,7 +37,7 @@ export default function Navbar({ language }: NavbarProps) {
                     <div className='absolute bottom-1 right-2 xl:relative xl:top-0 xl:right-0'>
                         <LangSwitcher />
                     </div>
-                    <NavbarClientMobile />
+                    <NavbarClientMobile language={language} />
                 </div>
             </MotionNav>
         </header>

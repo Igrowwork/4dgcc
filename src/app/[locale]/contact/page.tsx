@@ -63,7 +63,7 @@ export default function Page({ params: { locale } }: { params: { locale: any } }
                             <div className='flex flex-col gap-2'>
                                 <p className={cn('sm:text-lg lg:text-xl text-primary', rubik.className)}>{t('location')}</p>
                                 <span className='w-[70%] sm:w-[75%] lg:w-[85%] xl:w-3/4 text-sm lg:text-base font-medium'>{t('address')}</span>
-                                <span className='w-[70%] sm:w-[75%] lg:w-[85%] xl:w-3/4 text-sm lg:text-base font-medium'>P.O. Box: 113983</span>
+                                <span className='w-[70%] sm:w-[75%] lg:w-[85%] xl:w-3/4 text-sm lg:text-base font-medium'></span>
                             </div>
                         </div>
                     </div>
