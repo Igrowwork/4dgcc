@@ -1,10 +1,10 @@
-/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link'
 import React from 'react'
 import { MotionNav } from './motion-div'
 import NavbarClient from './navbar-client'
 import NavbarClientMobile from './navbar-client-mobile'
 import LangSwitcher from './lang-switcher'
+import Image from 'next/image'
 
 interface NavbarProps {
     language: string
@@ -23,10 +23,10 @@ export default function Navbar({ language }: NavbarProps) {
             <MotionNav variants={variants} initial={variants.start} animate={variants.end} transition={{ duration: 0.4 }} className='max-w-7xl mx-auto grid grid-cols-3 sm:grid-cols-10 h-full'>
                 <div className='col-span-2 xl:col-span-3 grid grid-cols-3'>
                     <Link href={`/`} className='relative h-full w-full'>
-                        <img src={"/assets/images/logo.png"} alt='logo' className='absolute top-0 left-0 h-full w-full object-contain object-left md:scale-110' />
+                        <Image src={"/assets/images/logo.png"} alt='logo' fill className='object-contain object-left md:scale-110' />
                     </Link>
-                    <div className='h-full w-full relative col-span-2'>
-                        <img src={"/assets/images/certificates.jpg"} alt='' className='absolute h-full w-full' />
+                    <div className='h-full w-full relative col-span-2 scale-90 md:scale-100'>
+                        <Image src={"/assets/images/certificates.jpg"} alt='' fill />
                     </div>
                 </div>
                 <div className='sm:col-span-2 hidden sm:flex'></div>

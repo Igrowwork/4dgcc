@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils'
@@ -8,6 +7,7 @@ import CustomLabel from '@/components/custom-label'
 import Link from 'next/link'
 import { MotionDiv, MotionH1, MotionH2, MotionP, MotionSection } from '@/components/motion-div'
 import type { Metadata } from "next";
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: "Fourth Dimension General Contracting LLC: Expert construction services for your projects in Abu Dhabi, UAE",
@@ -54,23 +54,23 @@ export default function Home({ params: { locale } }: { params: { locale: any } }
   const clients = ['client-1.jpg', 'client-2.png', 'client-3.png', 'client-4.png', 'client-5.png', 'client-6.jpg', 'client-7.png', 'client-8.png',]
 
   return (
-    <main className="flex flex-col gap-20">
+    <main className="flex flex-col gap-20 w-full h-full overflow-hidden">
 
       {/*  Hero Section  */}
       <MotionSection variants={variants} initial={variants.startUp} animate={variants.endUp} transition={{ duration: 0.5, delay: 0.3 }} className='h-[550px] xl:h-screen w-full relative mb-20'>
-        <img src={"/assets/images/hero-img.jpg"} alt='hero image' className='object-cover absolute h-full w-full' />
-        <div className='absolute h-fit w-fit flex flex-col gap-4 top-1/3 left-10 lg:left-20 xl:left-36'>
+        <Image src={"/assets/images/hero-img.jpg"} alt='hero image' fill className='object-cover' />
+        <div className='absolute h-fit w-fit flex flex-col gap-4 top-1/3 left-8 lg:left-20 xl:left-36'>
           <MotionH1 variants={variants} initial={variants.startUp} animate={variants.endUp} transition={{ duration: 0.4, delay: 0.9 }} className={cn('text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white font-bold', rubik.className)}>{t('heading')}</MotionH1>
           <MotionH2 variants={variants} initial={variants.startUp} animate={variants.endUp} transition={{ duration: 0.4, delay: 1.1 }} className='text-white w-11/12 sm:text-lg lg:text-xl xl:text-2xl font-semibold'>{t('subHeading')}</MotionH2>
         </div>
         <div className={cn("absolute text-white h-fit w-fit top-[70%] md:top-[90%] lg:top-[85%] md:left-20 lg:left-40 xl:left-60 flex flex-col md:flex-row items-center md:items-start", rubik.className)}>
           <div className='flex'>
-            <MotionDiv variants={variants} initial={variants.start} animate={variants.end} transition={{ duration: 0.4, delay: 1.4 }} className='p-4 lg:p-8 flex items-center flex-col gap-2 bg-secondary-main h-fit w-fit text-xs sm:text-sm lg:text-base'>
-              <span className='text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-semibold'>800+</span>
+            <MotionDiv variants={variants} initial={variants.start} animate={variants.end} transition={{ duration: 0.4, delay: 1.4 }} className='p-2 md:p-4 lg:p-8 flex items-center flex-col gap-2 bg-secondary-main h-fit w-fit text-xs sm:text-sm lg:text-base'>
+              <span className='text-2xl sm:text-4xl lg:text-6xl xl:text-7xl font-semibold'>4500+</span>
               <span>{t('completedProjects')}</span>
             </MotionDiv>
-            <MotionDiv variants={variants} initial={variants.start} animate={variants.end} transition={{ duration: 0.4, delay: 1.6 }} className='p-4 lg:p-8 flex items-center flex-col gap-2 bg-primary-main h-fit w-fit text-xs sm:text-sm lg:text-base'>
-              <span className='text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-semibold'>17+</span>
+            <MotionDiv variants={variants} initial={variants.start} animate={variants.end} transition={{ duration: 0.4, delay: 1.6 }} className='p-2 md:p-4 lg:p-8 flex items-center flex-col gap-2 bg-primary-main h-fit w-fit text-xs sm:text-sm lg:text-base'>
+              <span className='text-2xl sm:text-4xl lg:text-6xl xl:text-7xl font-semibold'>17+</span>
               <span>{t('experience')}</span>
             </MotionDiv>
           </div>
@@ -112,9 +112,9 @@ export default function Home({ params: { locale } }: { params: { locale: any } }
           </div>
           <MotionDiv variants={aboutVariants} initial="hiddenRight" whileInView={"visibleRight"} viewport={{ once: true }} transition={{ duration: 0.4, delay: 1 }} className='sm:col-span-6 sm:pr-32 lg:pr-0 h-full w-full flex justify-center items-center'>
             <div className='relative md:h-[460px] w-full my-auto'>
-              <img src='/assets/images/home-about-bg.png' alt='bg-svg' className='absolute h-full w-full object-contain object-right xl:scale-[1.02]' />
+              <Image src='/assets/images/home-about-bg.png' alt='bg-svg' fill className='object-contain object-right xl:scale-[1.02]' />
               <div className='relative h-60 md:h-[350px] md:scale-[.65] lg:scale-100 lg:w-5/6 xl:w-11/12 lg:mt-16 xl:mt-0 xl:top-9'>
-                <img src='/assets/images/home-about-img.jpg' alt='bg-svg' className='absolute object-cover object-left' />
+                <Image src='/assets/images/home-about-img.jpg' alt='bg-svg' fill className='object-cover object-left' />
               </div>
             </div>
           </MotionDiv>
@@ -131,19 +131,19 @@ export default function Home({ params: { locale } }: { params: { locale: any } }
           <MotionP variants={aboutVariants} initial="hiddenBottom" whileInView={"visibleBottom"} viewport={{ once: true }} className='text-text-color leading-relaxed text-sm lg:text-base'>{t('servicetext')}</MotionP>
           <div className='grid sm:grid-cols-3 gap-8'>
             <MotionDiv variants={aboutVariants} initial="hiddenRight" whileInView={"visibleRight"} viewport={{ once: true }} transition={{ duration: 0.4, delay: 0.4 }} className='relative h-[450px] w-full'>
-              <img src={"/assets/images/home-service-1.png"} alt='image' className='absolute h-full w-full object-cover' />
+              <Image src={"/assets/images/home-service-1.png"} alt='image' fill className='object-cover' />
               <div className='absolute bottom-0 bg-secondary-main max-h-max w-full py-3'>
                 <p className='text-center text-2xl text-white'>{t('service1')}</p>
               </div>
             </MotionDiv>
             <MotionDiv variants={aboutVariants} initial="hiddenRight" whileInView={"visibleRight"} viewport={{ once: true }} transition={{ duration: 0.4, delay: 0.7 }} className='relative h-[450px] w-full'>
-              <img src={"/assets/images/home-service-2.png"} alt='image' className='absolute h-full w-full object-cover' />
+              <Image fill src={"/assets/images/home-service-2.png"} alt='image' className='object-cover' />
               <div className='absolute bottom-0 bg-primary-main max-h-max w-full py-3'>
                 <p className='text-center text-2xl text-white'>{t('service2')}</p>
               </div>
             </MotionDiv>
             <MotionDiv variants={aboutVariants} initial="hiddenRight" whileInView={"visibleRight"} viewport={{ once: true }} transition={{ duration: 0.4, delay: 1 }} className='relative h-[450px] w-full'>
-              <img src={"/assets/images/home-service-3.png"} alt='image' className='absolute object-cover h-full w-full' />
+              <Image fill src={"/assets/images/home-service-3.png"} alt='image' className='object-cover' />
               <div className='absolute bottom-0 bg-secondary-main max-h-max w-full py-3'>
                 <p className='text-center text-2xl text-white'>{t('service3')}</p>
               </div>
@@ -168,7 +168,7 @@ export default function Home({ params: { locale } }: { params: { locale: any } }
           <MotionP variants={aboutVariants} initial="hiddenBottom" whileInView={"visibleBottom"} viewport={{ once: true }} className='text-text-color leading-relaxed text-sm lg:text-base'>{t('projecttext')}</MotionP>
           <div className='grid sm:grid-cols-2 lg:grid-cols-4 gap-6'>
             <MotionDiv variants={aboutVariants} initial="hiddenRight" whileInView={"visibleRight"} viewport={{ once: true }} transition={{ duration: 0.4, delay: 0.4 }} className='relative h-[350px] w-full'>
-              <img src={"/assets/projects/project-1.jpg"} alt='' className='absolute h-full w-full object-cover' />
+              <Image fill src={"/assets/projects/project-1.jpg"} alt='' className='object-cover' />
               {/* <div className='absolute top-0 left-0 h-full w-full bg-secondary-main/65' /> */}
               <div className='relative flex flex-col gap-4 py-8 px-4 text-center justify-between text-white'>
                 {/* <h3 className='text-2xl leading-tight font-semibold'>Warehouses in ICAD - Plots 7A & 8A</h3> */}
@@ -180,7 +180,7 @@ export default function Home({ params: { locale } }: { params: { locale: any } }
               </div>
             </MotionDiv>
             <MotionDiv variants={aboutVariants} initial="hiddenRight" whileInView={"visibleRight"} viewport={{ once: true }} transition={{ duration: 0.4, delay: 0.7 }} className='relative h-[350px] w-full'>
-              <img src={"/assets/projects/project-9.jpg"} alt='' className='object-cover absolute h-full w-full' />
+              <Image src={"/assets/projects/project-9.jpg"} alt='' fill className='object-cover' />
               {/* <div className='absolute top-0 left-0 h-full w-full bg-primary-main/65' /> */}
               <div className='relative flex flex-col gap-4 py-8 px-4 text-center text-white'>
                 {/* <h3 className='text-2xl leading-tight font-semibold'>WEDDING HALL MOHD BIN RASHED AL MAKTOOM HUMANITARIAN SHARITIES EST</h3> */}
@@ -192,7 +192,7 @@ export default function Home({ params: { locale } }: { params: { locale: any } }
               </div>
             </MotionDiv>
             <MotionDiv variants={aboutVariants} initial="hiddenRight" whileInView={"visibleRight"} viewport={{ once: true }} transition={{ duration: 0.4, delay: 1 }} className='relative h-[350px] w-full'>
-              <img src={"/assets/projects/project-8.jpg"} alt='' className='absolute h-full w-full object-cover' />
+              <Image src={"/assets/projects/project-8.jpg"} alt='' fill className='object-cover' />
               {/* <div className='absolute top-0 left-0 h-full w-full bg-secondary-main/65' /> */}
               <div className='relative flex flex-col gap-4 py-8 px-4 text-center text-white'>
                 {/* <h3 className='text-2xl leading-tight font-semibold'>UNION COOP UM AL QUWAIN</h3> */}
@@ -204,7 +204,7 @@ export default function Home({ params: { locale } }: { params: { locale: any } }
               </div>
             </MotionDiv>
             <MotionDiv variants={aboutVariants} initial="hiddenRight" whileInView={"visibleRight"} viewport={{ once: true }} transition={{ duration: 0.4, delay: 1.3 }} className='relative h-[350px] w-full'>
-              <img src={"/assets/projects/project-6.jpg"} alt='' className='absolute h-full w-full object-cover' />
+              <Image src={"/assets/projects/project-6.jpg"} alt='' fill className='object-cover' />
               {/* <div className='absolute top-0 left-0 h-full w-full bg-primary-main/65' /> */}
               <div className='relative flex flex-col gap-4 py-8 px-4 text-center text-white'>
                 {/* <h3 className='text-2xl leading-tight font-semibold'>MOSQUE EMMAM HOUSE ABLUTION FOR MINISTRY OF AWQUAF ISLAMIC AFFAIRS</h3> */}
@@ -229,7 +229,7 @@ export default function Home({ params: { locale } }: { params: { locale: any } }
           <div className='grid grid-cols-2 md:grid-cols-4 gap-y-10'>
             {clients.map((client, index) => (
               <MotionDiv initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: 0.2 * index }} key={index} className='relative h-20 w-full'>
-                <img src={`/assets/images/${client}`} alt={client} className='absolute h-full w-full object-contain' />
+                <Image src={`/assets/images/${client}`} alt={client} fill className='absolute h-full w-full object-contain' />
               </MotionDiv>
             ))}
           </div>
