@@ -60,7 +60,7 @@ export default function Home({ params: { locale } }: { params: { locale: any } }
       <MotionSection variants={variants} initial={variants.startUp} animate={variants.endUp} transition={{ duration: 0.5, delay: 0.3 }} className='h-[550px] xl:h-screen w-full relative mb-20'>
         <Image src={"/assets/images/hero-img.jpg"} alt='hero image' fill className='object-cover' />
         <div className='absolute h-fit w-fit flex flex-col gap-4 top-1/3 left-8 lg:left-20 xl:left-36'>
-          <MotionH1 variants={variants} initial={variants.startUp} animate={variants.endUp} transition={{ duration: 0.4, delay: 0.9 }} className={cn('text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white font-bold', rubik.className)}>{t('heading')}</MotionH1>
+          <MotionH1 variants={variants} initial={variants.startUp} animate={variants.endUp} transition={{ duration: 0.4, delay: 0.9 }} className={cn('text-2xl sm:text-4xl lg:text-5xl xl:text-6xl text-white font-bold', rubik.className)}>{t('heading')}</MotionH1>
           <MotionH2 variants={variants} initial={variants.startUp} animate={variants.endUp} transition={{ duration: 0.4, delay: 1.1 }} className='text-white w-11/12 sm:text-lg lg:text-xl xl:text-2xl font-semibold'>{t('subHeading')}</MotionH2>
         </div>
         <div className={cn("absolute text-white h-fit w-fit top-[70%] md:top-[90%] lg:top-[85%] md:left-20 lg:left-40 xl:left-60 flex flex-col md:flex-row items-center md:items-start", rubik.className)}>
